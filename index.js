@@ -111,13 +111,15 @@ app.post('/sendemail',(req,res)=>{
                 }
                 else {
                     console.log('Successfully Email Sent To:' + mailOptions.to)
+                    alert("Form Submitted")
                     fs.unlink(path,function(err){
                     if(err){
                         return res.end(err)
                     }
                     else{
                         console.log('Deleted')
-                        return res.redirect('/result.html')
+                        return res.redirect('/index.html')
+                    
                     }
                 })
             }
