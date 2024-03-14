@@ -102,26 +102,25 @@ app.post('/sendemail',(req,res)=>{
                     }
                 ]
 
-            }    
-
-            
+            }  
             transporter.sendMail(mailOptions, function(error, info){ 
                 if(error){
                     console.log('Error Occured' + error)
                 }
                 else {
-                    console.log('Successfully Email Sent To:' + mailOptions.to)
-                    alert("Form Submitted")
+                    console.log('Successfully Email Sent To:' + mailOptions.to);
+
                     fs.unlink(path,function(err){
                     if(err){
                         return res.end(err)
                     }
                     else{
                         console.log('Deleted')
-                        return res.redirect('/index.html')
+                        return res.redirect('/result.html')
                     
                     }
                 })
+                // res.redirect('/');
             }
         })
         }
