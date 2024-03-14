@@ -116,7 +116,7 @@ app.post('/sendemail',(req,res)=>{
                     }
                     else{
                         console.log('Deleted')
-                        return res.redirect('/result.html')
+                        return res.redirect('/index.html')
                     
                     }
                 })
