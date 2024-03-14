@@ -1722,50 +1722,55 @@ input[type=submit]:hover {
         <br><br>
         <div class="form-group row">
             <h4 style="color: black; padding-right: 80%;">Full Name</h4>
-            <input type="text" name="name" required placeholder="Enter full name :" class="form-control">
+            <input type="text" name="name" required placeholder="Enter full name :" class="form-control" style=" border: 3px solid #2596be;
+            border-radius: 4px;">
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black;padding-right: 80%;">Mobile No</h4>
-            <input type="text" name="phone" required placeholder="Enter mobile No :" class="form-control">
+            <h4 style="color: black;padding-right: 81%;">Mobile No</h4>
+            <input type="text" name="phone" required placeholder="Enter mobile No :" class="form-control" style=" border: 3px solid #2596be;
+            border-radius: 4px;">
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black ; padding-right: 82%;">Email id</h4>
+            <h4 style="color: black ; padding-right: 85%;">Email id</h4>
             <input type="email" name="to" required placeholder="To :" class="form-control" style=" width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 3px solid #2596be;
             border-radius: 4px;
             box-sizing: border-box;">
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black ;padding-right: 65%;">Residential Address</h4>
-            <input type="text" name="address" required placeholder="Enter Residential address :" class="form-control">
+            <h4 style="color: black ;padding-right: 63%;">Residential Address</h4>
+            <input type="text" name="address" required placeholder="Enter Residential address :" class="form-control" style=" border: 3px solid #2596be;
+            border-radius: 4px;">
         </div>
 
 
         <div class="form-group row">
-            <h4 style="color: black; padding-right: 75%;">Qualification</h4>
-            <input type="text" name="qualification" required placeholder=" Enter Your Qualification :" class="form-control">
+            <h4 style="color: black;padding-right:69%;">Pursuing Degree</h4>
+            <input type="text" name="qualification" required placeholder=" Enter Your Qualification :" class="form-control" style=" border: 3px solid #2596be;
+            border-radius: 4px;">
         </div>
         
         <div class="form-group row">
-            <h4 style="color: black; padding-right:75%;">Aim of Project</h4>
+            <h4 style="color: black; padding-right:74%;">Aim of Project</h4>
             <textarea class="form-control" name="aim" cols="30" rows="4" required placeholder="Message : " style=" width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 3px solid #2596be;
+        border-radius: 4px;
             box-sizing: border-box;"></textarea>
         </div>
 
         <div class="form-group row">
-            <h4 style="color: black; padding-right: 80%;">Platform</h4>
-            <select name="platform" title="Platform">
+            <h4 style="color: black;padding-right: 83%; ">Platform</h4>
+            <select name="platform" title="Platform" style=" border: 3px solid #2596be;
+            border-radius: 4px; background-color: white;">
                 <option value="Matlab"> Matlab</option>
                 <option value="Python"> Python</option>
                 <option value="MS2"> NS-2</option>
@@ -1779,21 +1784,35 @@ input[type=submit]:hover {
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
-        border: 1px solid #ccc;
+        border: 3px solid #2596be;
         border-radius: 4px;
-        box-sizing: border-box;">
+        box-sizing: border-box;
+        background-color: white;">
        </div>
 
        <div class="form-group row">
         <button style="border: none; background-color: #ffbc13; color:white; width:30%;margin-top: 10px; border-radius: 5px; height: 50px;">
-           <b> Send Message</b>
+           <b style="font-size: 20px;"> Submit</b>
         </button>
+        <p>Data Sent succesfully</p>
        </div>
+       <br><br><br>
       </form>
       </div>
       </div>
     </div>
     </div>
+    <script>
+       document.getElementById("contact form").addEventListener("/sendemail", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Here you can add your code to submit the form data to your backend using AJAX or any other method
+
+        // For demonstration purposes, I'm just showing a success message
+        document.getElementById("contact form").style.display = "none"; // Hide the form
+        document.getElementById("success-message").style.display = "block"; // Show the success message
+    });
+      </script>
     <!-- ======================================================== -->
    
 
